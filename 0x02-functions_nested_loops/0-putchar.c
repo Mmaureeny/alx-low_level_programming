@@ -1,20 +1,20 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
-* main - program that prints Alx.
+* main - Entry point
 *
-* Return: int
-*/
-
+* Description : A program that prints _putchar and new line
+*
+* Return: returns 0
+**/
 int main(void)
 {
-int n = 0;
-char str_ax[3] = "Alx";
-
-while (n < 3)
+char c[8] = "_putchar";
+int i = 0;
+for (i = 0; i < 8; i++)
 {
-_putchar(str_ax[n]);
-n += 1;
+_putchar(c[i]);
 }
 _putchar('\n');
 return (0);
