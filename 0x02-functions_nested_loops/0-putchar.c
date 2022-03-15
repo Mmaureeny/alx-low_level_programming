@@ -1,4 +1,4 @@
-nclude "alx.h"
+#include "alx.h"
 
 /**
 * main - program that prints Alx.
