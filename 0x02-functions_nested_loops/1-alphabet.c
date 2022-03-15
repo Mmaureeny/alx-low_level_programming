@@ -1,19 +1,12 @@
-#include "holberton.h"
+nclude "main.h"
 
 /**
-* print_alphabet - function that prints the alphabet, lowercase
-* You can only use _putchar twice in your code
-* Return: nothing.
+* main - check the code for Holberton School students.
+*
+* Return: Always 0.
 */
-
-void print_alphabet(void)
+int main(void)
 {
-int l = 'a';
-
-while (l <= 'z')
-{
-_putchar(l);
-l += 1;
-}
-_putchar(10);
+print_alphabet();
+return (0);
 }
