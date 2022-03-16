@@ -1,14 +1,19 @@
 #include "main.h"
 
 /**
-* main - Entry point
-*
-* Description : A program that checks code for alx student
-*
-* Return: returns 0
+* print_alphabet - function that prints the alphabet, lowercase
+* You can only use _putchar twice in your code
+* Return: nothing.
 */
-int main(void)
+
+void print_alphabet(void)
 {
-print_alphabet();
-return (0);
+int l = 'a';
+
+while (l <= 'z')
+{
+_putchar(l);
+l += 1;
+}
+_putchar(10);
 }
