@@ -28,7 +28,7 @@ else
 {
 _putchar(' ');
 _putchar(prod + 48);
-}	
+}
 }
 _putchar('\n');
 }
