@@ -1,9 +1,11 @@
-nclude "main.h"
+#include "main.h"
 
 /**
-* main - check the code for Holberton School students.
+* main - Entry point
 *
-* Return: Always 0.
+* Description : A program that checks code for alx student
+*
+* Return: returns 0
 */
 int main(void)
 {
