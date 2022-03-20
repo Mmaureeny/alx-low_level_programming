@@ -1,27 +1,25 @@
 #include <stdio.h>
 
 /**
-* main - prints sum of fibo numbers under 4,000,000
+* main - prints the sum of fibonacci numbers
+*
 * Return: 0
-*/
+ */
 int main(void)
 {
-long f1, f2, next, sum;
+int a;
+long int n1, n2, fn;
 
-f1 = 1;
-f2 = 2;
-next = 3;
-sum = f2;
-
-while (next < 4000000)
+n1 = 1;
+n2 = 2;
+printf("%ld, %ld", n1, n2);
+for (a = 0; a < 48; a++)
 {
-next = f1 + f2;
-f1 = f2;
-f2 = next;
-if ((f2 < 4000000) && (f2 % 2 == 0))
-sum += f2;
-/* printf("f1 = %lu, f2 = %lu, sum = %lu\n", f1, f2, sum); */
+fn = n1 + n2;
+printf(", %ld", fn);
+n1 = n2;
+n2 = fn;
 }
-printf("%lu\n", sum);
+printf("\n");
 return (0);
 }
