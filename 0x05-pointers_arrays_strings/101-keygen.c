@@ -3,11 +3,11 @@
 #include <time.h>
 #include <stdio.h>
 /**
-* program that generates random valid passwords
-*
+* 
+*/
 int main(void)
 {
-int num:
+int num;
 srand(time(0));
 num = rand();
 printf("%i\n", num);
