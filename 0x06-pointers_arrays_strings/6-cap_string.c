@@ -1,38 +1,31 @@
 #include "main.h"
-
 /**
-* cap_string - function that capitalizes all words of a string.
-* @ch: Pointer to Char
-* Return: char.
+* cap_string - capitalizes
+* @i: the string
+* Return: pointer to dest
 */
 
-char *cap_string(char *ch)
+char *cap_string(char *i)
 {
-int i = 0;
+int c = 0, j;
+int sp[] = {9, 10, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
 
-while (*(ch + i) != '\0')
+if (*(i + c) >= 97 && *(i + c) <= 122)
+*(i + c) = *(i + c) - 32;
+c++;
+
+while (*(i + c) != '\0')
 {
-if (i == 0)
-*(ch + i) = *(ch + i) - ' ';
-if (*(ch + i) == ' ' || *(ch + i) == '\t')
-i++;
-else if (*(ch + i) == '\n' || *(ch + i) == ',')
-i++;
-else if (*(ch + i) == ';' || *(ch + i) == '.')
-i++;
-else if (*(ch + i) == '!' || *(ch + i) == '?')
-i++;
-else if (*(ch + i) == '"' || *(ch + i) == '(')
-i++;
-else if (*(ch + i) == ')' || *(ch + i) == '{')
-i++;
-else if (*(ch + i) == '}')
-i++;
-if (*(ch + i) >= 97 && *(ch + i) <= 122)
+for (j = 0; j < 13; j++)
 {
-*(ch + i) = *(ch + i) - ' ';
-i++;
+if (*(i + c) == sp[j])
+{
+if ((*(i + (c + 1)) >= 97) && (*(i + (c + 1)) <= 122))
+*(i + (c + 1)) = *(i + (c + 1)) - 32;
+break;
 }
 }
-return (ch);
+c++;
+}
+return (i);
 }
