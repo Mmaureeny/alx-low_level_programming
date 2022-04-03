@@ -1,33 +1,33 @@
 #include "main.h"
 
 /**
-* is_prime_number - returns 1 if the input integer is a prime number
-* otherwise return 0
-* @n: input number
-*
-* Return: int
+* prime_a - main - check the code
+* @a: number
+* @b: number of power
+* Return: Always 0.
 */
 
-int is_prime_number(int n)
+int prime_a(int a, int b)
 {
-if (n <= 1)
+if (a <= 1 || (a != b && a % b == 0))
+{
 return (0);
-return (getNumPrim(n, 2));
+}
+else if (a == b)
+{
+return (1);
+}
+return (prime_a(a, b + 1));
 }
 
-/**
-* getNumPrim - function that gets if num is 0 or 1
-*
-* @num: input number
-* @i: Counter variable
-* Return: int
-*/
 
-int getNumPrim(int num, int i)
+/**
+* is_prime_number - main - check the code
+* @n: number
+*
+* Return: Always 0.
+*/
+int is_prime_number(int n)
 {
-if (num == i)
-return (1);
-if (num % i == 0)
-return (0);
-return (getNumPrim(num, i + 1));
+return (prime_a(n, 2));
 }
