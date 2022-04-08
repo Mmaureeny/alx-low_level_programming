@@ -12,7 +12,7 @@ int *arr;
 int i;
 
 if (min > max)
-		return (NULL);
+return (NULL);
 arr = malloc(sizeof(*arr) * ((max - min) + 1));
 
 if (arr == NULL)
