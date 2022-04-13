@@ -3,12 +3,12 @@
 
 /**
 * print_name - fuction that prints a name
-* @name: name of the person 
-* @f: input pointer fuction and execute it 
+* @name: name of the person
+* @f: input pointer function and execute it
 * Return: nothing
 */
 
-void print_name(char *name, void (*f)(char*))
+void print_name(char *name, void (*f)(char *))
 {
 if (name != 0 && f != 0)
 f(name);
