@@ -32,7 +32,7 @@ if (head == NULL)
 return;
 }
 
-new = *head;
+temp = *head;
 *head = NULL;
 free_listint(temp);
 }
